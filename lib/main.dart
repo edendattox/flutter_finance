@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_finance/config/palette.dart';
+import 'package:flutter_finance/screens/home_screen.dart';
 import 'package:flutter_finance/screens/landing_screen.dart';
 
 void main() {
@@ -18,9 +19,10 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: Palette.scaffold,
       ),
-      initialRoute: '/',
+      initialRoute: '/landing',
       routes: {
-        '/': (context) => const LandingScreen(),
+        '/landing': (context) => const LandingScreen(),
+        '/': (context) => const HomeScreen(),
       },
     );
   }
